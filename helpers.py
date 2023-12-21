@@ -1,12 +1,5 @@
 from bakery import assert_equal
 
-INSTRUCTION = """
-[Instruction]: Welcome! What would you like to do today? 
-Please enter either 'encrypt' or 'decrypt' to encrypt or decrypt your 
-desired message!
-"""
-ENCRYPTING_MESSAGE = "Please enter your desired message to be encrypted!"
-DECRYPTING_MESSAGE = "Please enter your encrypted message to be decrypted!"
 ENTER_HASH = "Please enter the hashed value to your encrypted message."
 ERROR = "There's been an error. Please try again."
 PRINTABLES_OFFSET = 32
