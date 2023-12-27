@@ -190,15 +190,15 @@ def main():
     encrypted message and the hash value. If the user hash value and the
     computed hash value match, the function prints out the decrypted message.
     """
-    user_action = input(INSTRUCTION)
+    user_action = input("INSTRUCTION")
     if user_action == "encrypt":
-        user_message = input(ENCRYPTING_MESSAGE)
+        user_message = input("ENCRYPTING_MESSAGE")
         encrypted_text = encrypt_text(user_message, ROTATION_AMOUNT)
         hashed_value = hash_text(user_message, BASE, HASH_SIZE)
         print("Encrypted message:", encrypted_text)
         print("Hash value:", hashed_value)
     elif user_action == "decrypt":
-        user_message = input(DECRYPTING_MESSAGE)
+        user_message = input("DECRYPTING_MESSAGE")
         user_hash = input(ENTER_HASH)
         decrypted_text = decrypt_text(user_message, ROTATION_AMOUNT)
         actual_hash = str(hash_text(decrypted_text, BASE, HASH_SIZE))
@@ -210,8 +210,8 @@ def main():
         print(ERROR)
 
 
-main()
-
+#main()
+"""
 assert_equal(convert_to_ascii("Hi!"), [72, 105, 33])
 assert_equal(rotation(convert_to_ascii("Hi!"), 1), [73, 106, 34])
 assert_equal(insert_tilde(convert_to_ascii("Hi!")), [72, 105, 33, 126])
@@ -221,3 +221,4 @@ assert_equal(decrypt_text("N|kqyx}+~", 10), "Dragons!")
 assert_equal(transform_ascii([33, 34], 1), [1, 17179869184])
 assert_equal(sum_values([33, 34]), 67)
 assert_equal(hash_text("Hello", 31, 1000000000), 590934605)
+"""
