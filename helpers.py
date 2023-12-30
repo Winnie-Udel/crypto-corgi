@@ -4,7 +4,6 @@ ENTER_HASH = "Please enter the hashed value to your encrypted message."
 ERROR = "There's been an error. Please try again."
 PRINTABLES_OFFSET = 32
 PRINTABLES_LENGTH = 94
-ROTATION_AMOUNT = 2
 BASE = 31
 HASH_SIZE = 1000000000
 

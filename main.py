@@ -4,8 +4,10 @@ from helpers import *
 
 @dataclass
 class State:
+    rotation_amount: int
     user_message: str
     encrypted_message: str
+    hash_value: str
 
 @route
 def index(state: State) -> Page:
@@ -29,13 +31,25 @@ def encryption(state: State) -> Page:
         HorizontalRule(),
         TextBox("user_message", state.user_message),
         "Encrypted message: " + state.encrypted_message,
-        Button("Submit", update_page)
+        "Hash value: " + state.hash_value,
+        Button("Submit", encryption_updating),
+        Button("Return Home", default_index)
     ])
 
 @route
-def update_page(state: State, user_message: str):
-    state.encrypted_message = encrypt_text(user_message, ROTATION_AMOUNT)
+def encryption_updating(state: State, user_message: str):
+    state.user_message = user_message
+    state.encrypted_message = encrypt_text(user_message, state.rotation_amount)
+    hash_value = hash_text(user_message, BASE, HASH_SIZE)
+    state.hash_value = str(hash_value)
     return encryption(state)
+
+@route
+def default_index(state: State):
+    state.user_message = ""
+    state.encrypted_message = ""
+    state.hash_value = ""
+    return index(state)
 
 @route
 def decryption(state: State) -> Page:
@@ -52,4 +66,4 @@ def setting(state: State) -> Page:
         HorizontalRule()
     ])
 
-start_server(State("", ""))
+start_server(State(2, "", "", ""))
