@@ -1,6 +1,4 @@
-<img align="left" src="images/corgi.png" height="70">
-
-# Crypto Corgi
+<img align="center" src="images/corgi_banner.png" height="70">
 
 ---
 Encrypt and decrypt messages with customizable settings!
