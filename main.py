@@ -66,10 +66,21 @@ def decryption(state: State) -> Page:
 
 @route
 def setting(state: State) -> Page:
+    rotation_amount = str(state.rotation_amount)
     return Page(state, [
         Header("Setting", 3),
+        HorizontalRule(),
         "Set the rotation amount.",
-        HorizontalRule()
+        SelectBox("rotation_amount",
+                  ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                  rotation_amount),
+        HorizontalRule(),
+        Button("Return Home", update_setting, float="right")
     ])
+
+@route
+def update_setting(state: State, rotation_amount: str):
+    state.rotation_amount = int(rotation_amount)
+    return index(state)
 
 start_server(State(2, "", "", ""))
