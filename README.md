@@ -1,4 +1,6 @@
-<img align="center" src="images/corgi_banner.png" height="70">
+<p align="center">
+  <img src="images/corgi_banner.png" height="80"/>
+</p>
 
 ---
 Encrypt and decrypt messages with customizable settings!
@@ -14,7 +16,7 @@ Encrypt and decrypt messages with customizable settings!
 
 ---
 - [Drafter Guide](https://drafter-edu.github.io/drafter/contents.html)
-- [Stack Overflow](https://stackoverflow.com/a/23447663)
+- [Stack Overflow](https://stackoverflow.com/a/12118349)
 
 ## Task List 
 
