@@ -11,33 +11,45 @@ class State:
 
 @route
 def index(state: State) -> Page:
+    state.user_message = ""
+    state.encrypted_message = ""
+    state.hash_value = ""
     return Page(state, [
-        Header("Crypto Corgi"),
+        Header("Crypto Corgi", 2),
         """
         Welcome to Crypto Corgi! Need to encrypt or decrypt a message? Well, you 
-        came to the right place! All you need to do is press the buttons below! 
+        came to the right place!
         """,
         HorizontalRule(),
-        Button("Encryption", encryption),
-        Button("Decryption", decryption),
+        Link("Encryption", encryption),
+        "Encrypt messages based on the rotation amount.",
+        BulletedList(["Input: Message", "Output: Encrypted Message and Hash Value"]),
+        HorizontalRule(),
+        Link("Decryption", decryption),
+        "Decrypt encrypted messages based on the rotation amount.",
+        BulletedList(["Input: Encrypted Message and Hash Value", "Output: Decrypted Message"]),
+        HorizontalRule(),
         Button("Setting", setting)
     ])
 
 @route
 def encryption(state: State) -> Page:
     return Page(state, [
-        Header("Encryption"),
-        "Please enter your desired message to be encrypted!",
+        Header("Encryption", 3),
+        "Rotation Amount: " + str(state.rotation_amount),
         HorizontalRule(),
+        "Please enter your desired message to be encrypted!",
         TextBox("user_message", state.user_message),
-        "Encrypted message: " + state.encrypted_message,
-        "Hash value: " + state.hash_value,
-        Button("Submit", encryption_updating),
-        Button("Return Home", default_index)
+        HorizontalRule(),
+        Table([["Encrypted Message", "Hash Value"],
+               [state.encrypted_message, state.hash_value]]),
+        HorizontalRule(),
+        Button("Submit", update_encryption),
+        Button("Return Home", index, float="right")
     ])
 
 @route
-def encryption_updating(state: State, user_message: str):
+def update_encryption(state: State, user_message: str):
     state.user_message = user_message
     state.encrypted_message = encrypt_text(user_message, state.rotation_amount)
     hash_value = hash_text(user_message, BASE, HASH_SIZE)
@@ -45,16 +57,9 @@ def encryption_updating(state: State, user_message: str):
     return encryption(state)
 
 @route
-def default_index(state: State):
-    state.user_message = ""
-    state.encrypted_message = ""
-    state.hash_value = ""
-    return index(state)
-
-@route
 def decryption(state: State) -> Page:
     return Page(state, [
-        Header("Decryption"),
+        Header("Decryption", 3),
         "Please enter your encrypted message to be decrypted!",
         HorizontalRule()
     ])
@@ -62,7 +67,8 @@ def decryption(state: State) -> Page:
 @route
 def setting(state: State) -> Page:
     return Page(state, [
-        Header("Setting"),
+        Header("Setting", 3),
+        "Set the rotation amount.",
         HorizontalRule()
     ])
 
