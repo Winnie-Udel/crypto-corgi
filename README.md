@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/corgi_banner.png" height="80"/>
+  <img src="images/corgi_banner.png" height="110"/>
 </p>
 
 ---
@@ -16,6 +16,10 @@ Encrypt and decrypt messages with customizable settings!
 
 ---
 - [Drafter Guide](https://drafter-edu.github.io/drafter/contents.html)
+- [Crypto Corgi BlockPy Reading](https://blockpy.cis.udel.edu/assignments/reading/bakery_project2_instructions?embed=True)
+  - [Ascii Table Reading](https://blockpy.cis.udel.edu/assignments/reading/bakery_project2_read_ascii_table?embed=True)
+  - [Character Rotation Reading](https://blockpy.cis.udel.edu/assignments/reading/bakery_project2_read_character_rotation?embed=True)
+  - [Hashing Values Reading](https://blockpy.cis.udel.edu/assignments/reading/bakery_project2_read_hashing?embed=True)
 - [Stack Overflow](https://stackoverflow.com/a/12118349)
 
 ## Task List 
@@ -26,6 +30,7 @@ decryption page.*
 - [X] Setting Page: *A page that allows the user to adjust rotation amount.*
 - [X] Encryption Page: *A page that allows user to encrypt their desired message, outputting its corresponding 
 hash value.*
-- [ ] Decryption Page: *A page where the user is prompted to input their encrypted message and hash value. 
+- [X] Decryption Page: *A page where the user is prompted to input their encrypted message and hash value. 
 If the user hash value and computed hash value match, the decrypted message will be output.*
+- [ ] Error Page: *A page the user is directed to if hash value and computed hash value does not match.*
 - [ ] Unit Test: *Ensure all the pages function properly via unit tests.*
