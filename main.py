@@ -15,10 +15,10 @@ def index(state: State) -> Page:
     state.encrypted_message = ""
     state.hash_value = ""
     return Page(state, [
+        float_left(Image("http://tinyurl.com/yc7pdb8u", 160, 120)),
         Header("Crypto Corgi", 2),
         """
-        Welcome to Crypto Corgi! Need to encrypt or decrypt a message? Well, you 
-        came to the right place!
+        Welcome! Need to encrypt or decrypt a message? Well, you came to the right place!
         """,
         HorizontalRule(),
         Link("Encryption", encryption),

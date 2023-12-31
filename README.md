@@ -1,7 +1,22 @@
+<img align="left" src="images/corgi.png" height="70">
+
 # Crypto Corgi
 
 ---
 Encrypt and decrypt messages with customizable settings!
+
+## Authors
+
+---
+| Name                  | UD Email               |
+|:----------------------|:-----------------------|
+| Winnie Li             | winnie@udel.edu        |
+
+## Acknowledgements 
+
+---
+- [Drafter Guide](https://drafter-edu.github.io/drafter/contents.html)
+- [Stack Overflow](https://stackoverflow.com/a/23447663)
 
 ## Task List 
 
