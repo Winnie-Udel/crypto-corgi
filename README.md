@@ -3,7 +3,11 @@
 </p>
 
 ---
-Encrypt and decrypt messages with customizable settings!
+<p align="center">Encrypt and decrypt messages with customizable settings!</p>
+
+## Preview 
+
+---
 
 ## Authors
 
@@ -21,6 +25,7 @@ Encrypt and decrypt messages with customizable settings!
   - [Character Rotation Reading](https://blockpy.cis.udel.edu/assignments/reading/bakery_project2_read_character_rotation?embed=True)
   - [Hashing Values Reading](https://blockpy.cis.udel.edu/assignments/reading/bakery_project2_read_hashing?embed=True)
 - [Stack Overflow](https://stackoverflow.com/a/12118349)
+- [Codeinhood](https://codinhood.com/nano/git/center-images-text-github-readme/)
 
 ## Task List 
 
@@ -32,5 +37,5 @@ decryption page.*
 hash value.*
 - [X] Decryption Page: *A page where the user is prompted to input their encrypted message and hash value. 
 If the user hash value and computed hash value match, the decrypted message will be output.*
-- [ ] Error Page: *A page the user is directed to if hash value and computed hash value does not match.*
+- [X] Error Page: *A page the user is directed to if hash value and computed hash value does not match.*
 - [ ] Unit Test: *Ensure all the pages function properly via unit tests.*

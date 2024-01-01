@@ -155,8 +155,24 @@ def update_decryption(state: State, encrypted_message: str, hash_value: str) -> 
 
 @route
 def error(state: State) -> Page:
+    """
+    Displays the error page.
+
+    Args:
+        state (State): New values of the page that is hidden from the user.
+
+    Returns:
+        Page: Composed of the required information needed for a viewable webpage.
+    """
     return Page(state, [
-        "There's been an error. Please try again."
+        Header("Error!", 3),
+        HorizontalRule(),
+        """
+        There's been an error. User-inputted hash value does not match the computed 
+        hash value. Please try again!
+        """,
+        HorizontalRule(),
+        Button("Try Again!", decryption)
     ])
 
 @route
