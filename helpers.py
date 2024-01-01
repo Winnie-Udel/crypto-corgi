@@ -1,5 +1,3 @@
-from bakery import assert_equal
-
 PRINTABLES_OFFSET = 32
 PRINTABLES_LENGTH = 94
 
@@ -165,15 +163,3 @@ def hash_text(message: str, base: int, hash_size: int) -> int:
     """
     hashed_value = sum_values(transform_ascii(convert_to_ascii(message), base)) % hash_size
     return hashed_value
-
-"""
-assert_equal(convert_to_ascii("Hi!"), [72, 105, 33])
-assert_equal(rotation(convert_to_ascii("Hi!"), 1), [73, 106, 34])
-assert_equal(insert_tilde(convert_to_ascii("Hi!")), [72, 105, 33, 126])
-assert_equal(encrypt_text("Dragons!", 10), "N|kqyx}+~")
-assert_equal(remove_tilde([72, 105, 33, 126]), [72, 105, 33])
-assert_equal(decrypt_text("N|kqyx}+~", 10), "Dragons!")
-assert_equal(transform_ascii([33, 34], 1), [1, 17179869184])
-assert_equal(sum_values([33, 34]), 67)
-assert_equal(hash_text("Hello", 31, 1000000000), 590934605)
-"""

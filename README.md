@@ -38,4 +38,4 @@ hash value.*
 - [X] Decryption Page: *A page where the user is prompted to input their encrypted message and hash value. 
 If the user hash value and computed hash value match, the decrypted message will be output.*
 - [X] Error Page: *A page the user is directed to if hash value and computed hash value does not match.*
-- [ ] Unit Test: *Ensure all the pages function properly via unit tests.*
+- [X] Unit Test: *Ensure all the pages function properly via unit tests.*
