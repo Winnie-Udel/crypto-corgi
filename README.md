@@ -5,9 +5,10 @@
 ---
 <p align="center">Encrypt and decrypt messages with customizable settings!</p>
 
-## Preview 
+## Preview
 
 ---
+[Crypto Corgi: Walkthrough](https://youtu.be/XGFue8PafjY)
 
 ## Authors
 
